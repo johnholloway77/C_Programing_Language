@@ -62,10 +62,10 @@ int main()
 
    printf("\nVertical histogram:\n");
 
-   char charArray[20][20];
+   char charArray[maxLength][20];
 
 
-    for (int i = 0; i <20; i++){
+    for (int i = 0; i <=maxLength; i++){
      for (int j = 0; j < 20; j++){
       charArray[i][j] = ' ';
       }
@@ -75,17 +75,17 @@ int main()
     for(int j = 0; j < 20; j++){
       int count = wordLength[j];
       while(count > 0){
-        charArray[19 - count][j] = '*';
+        charArray[maxLength - count][j] = '*';
         count--;
        }  
     }
 
-   for (int i = 0; i < 20; i++){
+   for (int i = 0; i <=maxLength; i++){
     for (int j = 0; j < 20; j++){
       putchar(charArray[i][j]);
     }
     
-    if(i < 18){
+    if(i < maxLength-1){
       printf("\n");
     }
    }
