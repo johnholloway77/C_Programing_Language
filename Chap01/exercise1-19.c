@@ -48,11 +48,14 @@ return 0;
 void reverseString(char s[])
 {
   char temp;
-  int c,j = 0;
+  int c,j;
+  c = j = 0;
 
-  while(s[j] != '\0'){
-    j++;
+  while (s[j] != '\0'){
+    ++j;
   }
+
+  j--;
 
   while(c <= j){
   temp = s[c];
@@ -61,5 +64,5 @@ void reverseString(char s[])
   ++c;
   --j;
   }
-
+  
 }
